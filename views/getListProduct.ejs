@@ -1,0 +1,157 @@
+<%- include('./partials/headSection') %>
+<link rel="stylesheet" href="/getListProduct.css" />
+<style>
+  .container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .container h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+      font-size: 28px;
+      font-weight: 600;
+  }
+
+  .container form {
+      display: grid;
+      gap: 20px;
+  }
+
+  .container form div {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .container form label {
+      color: #555;
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 14px;
+  }
+
+  .container form input {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      font-family: inherit;
+  }
+
+  .container form input:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+  }
+
+  .container form input::placeholder {
+      color: #999;
+  }
+
+  .container form div.full {
+      grid-column: 1 / -1;
+  }
+
+  .container .btn {
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-top: 10px;
+  }
+
+  .container .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  }
+
+  .container .btn:active {
+      transform: translateY(0);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .container h2 {
+        font-size: 24px;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <%- include('./partials/navbar') %>
+
+  <div class="container">
+    <h2>Add New Product</h2>
+
+    <form method="POST" action="/host/product-listed">
+
+
+      <!-- Product Name -->
+      <div>
+        <label for="productName">Product Name</label>
+        <input id="productName" name="productName" type="text" placeholder="Enter product name" />
+      </div>
+
+      <!-- Price -->
+      <div>
+        <label for="price">Price (₹)</label>
+        <input id="price" name="price" type="number" placeholder="Enter price (₹)" />
+      </div>
+
+      <!-- Rating -->
+      <div>
+        <label for="rating">Rating</label>
+        <input id="rating" name="rating" type="number" placeholder="Rating" />
+      </div>
+
+      <!-- Discount -->
+      <div>
+        <label for="location">Location</label>
+        <input id="location" name="location" type="text" placeholder="location" />
+      </div>
+
+      <div>
+        <label for="discoutn">Discount (%)</label>
+        <input id="discount" name="discount" type="number" placeholder="Discount" />
+      </div>
+
+      <!-- Image -->
+      <div class="full">
+        <label for="image">Image Url</label>
+        <input id="image" name="image" type="url" />
+      </div>
+      <!-- Submit -->
+      <button type="submit" class="btn">Add Product</button>
+
+    </form>
+  </div>
+
+<%- include('./partials/footer') %>
+
+</body>
+</html>
+
+
+<body>
+
+  
+
+</body>
+</html>

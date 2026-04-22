@@ -1,0 +1,108 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Added 😂</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.1);
+      padding: 40px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      animation: pop 0.5s ease;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .emoji {
+      font-size: 50px;
+      margin-bottom: 15px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #fff;
+      color: #333;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 5px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ffd700;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="emoji">😂🎉</div>
+
+    <h1>Product Successfully Added!</h1>
+
+    <p>
+      Congrats! Your product is now live…<br>
+      Let’s hope someone actually buys it 🤣
+    </p>
+
+    <p>
+      If not, don’t worry… even Amazon started small 😎
+    </p>
+
+    <button onclick="goHome()">🏠 Go Home</button>
+    <button onclick="addMore()">➕ Add Another Product</button>
+  </div>
+
+  <script>
+    function goHome() {
+      window.location.href = "/";
+    }
+
+    function addMore() {
+      window.location.href = "/list-product";
+    }
+  </script>
+
+</body>
+</html>

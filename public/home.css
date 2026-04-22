@@ -1,0 +1,87 @@
+/* Reset (IMPORTANT) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f6f9;
+}
+
+/* NEW outer wrapper */
+.page {
+  display: flex;
+  justify-content: center;   /* 👈 forces center */
+}
+
+/* Main container */
+.main-wrapper {
+  width: 100%;
+  max-width: 1100px;         /* 👈 reduce width more */
+  padding: 20px;
+}
+
+/* Grid */
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image */
+.img-box {
+  position: relative;
+  height: 200px;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Badge */
+.discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+/* Content */
+.content {
+  padding: 15px;
+}
+
+.price {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}

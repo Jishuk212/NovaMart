@@ -1,0 +1,66 @@
+<%- include('./partials/headSection') %>
+<link rel="stylesheet" href="/getListProduct.css" />
+</head>
+
+<body>
+  <%- include('./partials/navbar') %>
+
+  <div class="container">
+    <h2>Add New Product</h2>
+
+    <form method="POST" action="/host/product-listed">
+
+
+      <!-- Product Name -->
+      <div>
+        <label for="productName">Product Name</label>
+        <input id="productName" name="productName" type="text" placeholder="Enter product name" />
+      </div>
+
+      <!-- Price -->
+      <div>
+        <label for="price">Price (₹)</label>
+        <input id="price" name="price" type="number" placeholder="Enter price (₹)" />
+      </div>
+
+      <!-- Rating -->
+      <div>
+        <label for="rating">Rating</label>
+        <input id="rating" name="rating" type="number" placeholder="Rating" />
+      </div>
+
+      <!-- Discount -->
+      <div>
+        <label for="location">Location</label>
+        <input id="location" name="location" type="text" placeholder="location" />
+      </div>
+
+      <div>
+        <label for="discoutn">Discount (%)</label>
+        <input id="discount" name="discount" type="number" placeholder="Discount" />
+      </div>
+
+      <!-- Image -->
+      <div class="full">
+        <label for="image">Image Url</label>
+        <input id="image" name="image" type="url" />
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn">Add Product</button>
+
+    </form>
+  </div>
+
+<%- include('./partials/footer') %>
+
+</body>
+</html>
+
+
+<body>
+
+  
+
+</body>
+</html>

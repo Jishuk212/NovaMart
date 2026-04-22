@@ -1,0 +1,65 @@
+<%- include('./partials/headSection') %>
+<link rel="stylesheet" href="/home.css" />
+</head>
+
+<body>
+
+<%- include('./partials/navbar') %>
+
+  <!-- BODY (placeholder) -->
+  <section class="hero">
+    <h1>Welcome to NovaMart</h1>
+  </section>
+
+  <div class="page">
+
+    <div class="main-wrapper">
+      <div class="product-container">
+
+        <% products.forEach(product => { %>
+          
+          <div class="card">
+            <div class="img-box">
+              <img src="<%= product.image %>" alt="product">
+              <span class="discount">-<%= product.discount %>%</span>
+            </div>
+
+            <div class="content">
+              <h3><%= product.productName %></h3>
+              <!-- <p class="category"><%= product.productType %></p> -->
+
+              <%
+                let finalPrice = product.price - (product.price * product.discount / 100);
+              %>
+              <div class="price">
+                ₹<%= finalPrice.toFixed(0) %>
+                <span style="text-decoration: line-through; color: gray; font-size: 14px;">
+                  ₹<%= product.price %>
+                </span>
+              </div>
+
+              <div class="rating"><%= '⭐'.repeat(product.rating) %></div>
+
+              <!-- <div class="condition">
+                <%= product.condition === 'new' ? '🆕 New' : '♻️ Old' %>
+              </div> -->
+
+              <!-- <div class="stock">Stock: <%= product.stock %></div> -->
+
+              <!-- <p class="desc"><%= product.description %></p> -->
+
+              <button>Add to Cart 🛒</button>
+            </div>
+          </div>
+
+        <% }) %>
+
+      </div>
+    </div>
+
+  </div>
+
+  <%- include('./partials/footer') %>
+
+</body>
+</html>
