@@ -18,12 +18,6 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-app.use(session({
-    secret: 'your-secret-key',
-    resave: false,
-    saveUninitialized: false
-}));
-
 app.use((req, res, next) => {
     res.isLoggedIn = req.session.isLoggedIn;
     next();
